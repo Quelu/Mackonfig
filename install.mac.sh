@@ -61,7 +61,7 @@ echo ""
 echo ""
 echo "----- Install useful global npm packages -----"
 
-npm install -g bower browserify coffee-script grunt grunt-cli gulp stylus watchify yo
+npm install -g bower browserify coffee-script grunt grunt-cli gulp stylus watchify yo polymer-cli firebase-tools
 
 echo ""
 echo ""

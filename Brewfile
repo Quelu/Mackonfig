@@ -8,3 +8,4 @@ node
 python
 python3
 wget --enable-iri
+zsh-syntax-highlighting
