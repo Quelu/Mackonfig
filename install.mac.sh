@@ -27,12 +27,10 @@ echo ""
 echo ""
 echo "----- Install homebrew & cask -----"
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor
 brew tap caskroom/cask
 brew install brew-cask
-brew tap caskroom/versions
-brew tap caskroom/fonts
 
 echo ""
 echo ""
@@ -55,29 +53,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 brew cask install $(cat "$DOTFILES_DIR/Caskfile"|grep -v "#")
 qlmanage -r
 
-
-echo ""
-echo ""
-echo ""
-echo "----- Install useful global npm packages -----"
-
-npm install -g bower browserify coffee-script grunt grunt-cli gulp stylus watchify yo polymer-cli firebase-tools
-
-echo ""
-echo ""
-echo ""
-echo "----- Install apm packages -----"
-
-apm install package-sync
-
-echo ""
-echo ""
-echo ""
-echo "----- Install python packages -----"
-
-pip install -I Cython==0.23
-USE_OSX_FRAMEWORKS=0 pip install kivy
-pip install pygments
+chsh -s $(which zsh)
 
 echo ""
 echo ""
