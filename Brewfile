@@ -7,7 +7,7 @@ git-extras
 node
 python
 python3
-wget --enable-iri
+wget
 yarn
 zsh
 zsh-syntax-highlighting
